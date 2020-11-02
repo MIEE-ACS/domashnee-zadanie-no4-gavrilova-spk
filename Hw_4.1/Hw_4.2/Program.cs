@@ -14,7 +14,7 @@ namespace Hw_4._2
 
             if (!int.TryParse(str, out num))
             {
-                Console.WriteLine("Вводить надо число. Конец программы.");
+                Console.WriteLine("Вводить надо целое число. Конец программы.");
                 Console.WriteLine("Для выхода нажмите любую кнопку...");
                 Console.ReadKey();
                 Environment.Exit(37707);
