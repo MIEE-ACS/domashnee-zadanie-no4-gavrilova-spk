@@ -49,7 +49,7 @@ namespace Hw_4._2
                 for (j = 0; j < N; j++)
                 {
                     arr[i, j] = rnd.Next(-5, 5);
-                    Console.Write("{0}   ", arr[i, j]);
+                    Console.Write("{0, -5}   ", arr[i, j]);
                     mult *= arr[i, j];
                     if (arr[i, j] < 0)                   
                         neg++;

@@ -77,7 +77,7 @@ namespace Hw_4._1
             else
                 Console.WriteLine("В массиве менее двух отрицательных элементов, посчитать сумму элементов между первым и последним отрицательными элементами невозможно");
 
-
+            bool two = false;
             Console.WriteLine("-----------------------------------------------");
             if (low != 0)   //элементов меньше модуля 1
             {
@@ -85,7 +85,10 @@ namespace Hw_4._1
                 for (i = 0; i < N; i++)   // do(n't) work
                 {
                     if (Math.Abs(arr[i]) < 1)
+                    {
                         arr[i] = 0;
+                        two = true;
+                    }
 
                     if (arr[i] == 0)
                     {
@@ -97,9 +100,19 @@ namespace Hw_4._1
                                 break;
                             }
                     }
-                    Console.WriteLine("{0:N2}", arr[i]);
+                    
+
+                    if(two && arr[i] != 0)
+                    {
+                        i--;
+                        two = false;
+                    }
                 }
-            }
+                    for (i = 0; i < N; i++)   // do(n't) work
+                    {
+                        Console.WriteLine("{0:N2}", arr[i]);
+                    }
+                }
             else
                 Console.WriteLine("В массиве нет элементов меньше модуля 1");
 
